@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Income Tax Return Eligibility Checker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Income Tax Return Eligibility Checker</h1>
+    <div class="container">
+        <form id="taxForm">
+            <label for="income">Annual Income(in Rupees):</label>
+            <input type="number" id="income" required><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" required><br>
+
+            <label for="dependents">Number of Dependents:</label>
+            <input type="number" id="dependents" required><br>
+
+            <label for="citizenship">Citizenship Status:</label>
+            <select id="citizenship" required>
+                <option value="citizen">Citizen</option>
+                <option value="permanent_resident">Permanent Resident</option>
+                <option value="foreign_resident">Foreign Resident</option>
+            </select><br>
+
+            <label for="employed">Employment Status:</label>
+            <select id="employed" required>
+                <option value="employed">Employed</option>
+                <option value="self_employed">Self-Employed</option>
+                <option value="unemployed">Unemployed</option>
+            </select><br>
+
+            <button type="submit">Check Eligibility</button>
+        </form>
+
+        <div id="result" style="display: none;">
+            <h2>Eligibility Result:</h2>
+            <p id="eligibilityMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
